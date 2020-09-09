@@ -1,25 +1,25 @@
 package hello.java;
 
-public class GenericBot extends CompuBot {
+public class GenericBot extends Bot {
     // now let's give those bots some unintended enhancements!.....
-    private int fluxCapacitor = 20;
-    private int humansDestroyed = 0;
+    private int _fluxCapacitor = 20;
+    private int _humansDestroyed = 0;
 
-    public GenericBot(String name, String codeword, int iq, int oil, int fluxcapacitor) {
-        super(name, codeword, iq, oil);
-        fluxCapacitor = fluxcapacitor;
+    public GenericBot(String _name, int _IQ, int _oil, int _fluxCapacitor) {
+        super(_name, _IQ, _oil);
+        this._fluxCapacitor = _fluxCapacitor;
     }
 
-    public void setFluxCapacitor(int fluxcapacitor){
-        fluxCapacitor = fluxcapacitor;
+    public void setFluxCapacitor(int _fluxCapacitor){
+        this._fluxCapacitor = _fluxCapacitor;
     }
 
     public int getFluxCapacitor(){
-        return fluxCapacitor;
+        return _fluxCapacitor;
     }
 
-    public void destroyHuman(){
-        Human.setLife(0);
-        ++humansDestroyed;
+    public void destroyHuman(Human human){
+        human.setLife(0);
+        ++this._humansDestroyed;
     }
 }

@@ -1,27 +1,29 @@
 package hello.java;
 
 public class Human {
-    private String Name;
-    private static int Life = 100;
+    private String _name;
+    private int _life = 100;
 
-    Human(String name){
-        Name = name;
+    Human(String _name){
+        this._name = _name;
     }
 
     public String getName() {
-        return Name;
+        return _name;
     }
 
-    public static void setLife(int life) {
-        Life = life;
+    public void setLife(int _life) {
+
+        this._life = _life;
     }
 
     public int getLife(){
-        return Life;
+
+        return _life;
     }
 
     public void Parrish(){
-        if (Human.Life <= 0){
+        if (this._life <= 0){
             System.out.println(getName() + " " + "says with a final breath, \"I did not expect this.... arrrghhh\"\n");
         }
     }
