@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello Java!");
+        System.out.println("\n Hello Java!\n");
         System.out.println("This program is designed to provide to you a very unique opportunity.  Interested?  Type [Y OR N]\n");
         String userInput = getUserInput();
 
@@ -14,6 +14,8 @@ public class Main {
             System.out.println("Thanks for stopping by.  Good day to youuuuu--__-_ERROR 38222.  Beep, boop, beep");
             pause(3);
         } else if (userInput.equalsIgnoreCase("y")) {
+
+            // create bots
             GenericBot bot1 = new GenericBot("bot1", 100, 10, 20);
 
             GenericBot bot2 = new GenericBot("bot2", 100, 10, 20);
@@ -22,17 +24,13 @@ public class Main {
 
             pause(3);
 
-            bot1.announceBotBirth();
+            Bot[] bots = {bot1, bot2};
 
-            pause(3);
-
-            bot2.announceBotBirth();
-
-            pause(3);
-
-            Bot Botinik = new Bot("Botinik", 5000, 10);
-
-            Botinik.announceBotBirth();
+            // render bots
+            for (var Bot : bots ){
+                Bot.render();
+                pause(2);
+            }
 
             pause(3);
             Human human = new Human("Geoffery");
@@ -55,9 +53,6 @@ public class Main {
 
             System.out.println("Thank you for enjoying this unique opportunity!  Until next time.\n");
 
-            System.out.println("Please enter any key to exit the program\n");
-
-            getUserInput();
         }
 
     }

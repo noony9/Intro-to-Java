@@ -22,4 +22,11 @@ public class GenericBot extends Bot {
         human.setLife(0);
         ++this._humansDestroyed;
     }
+
+    @Override
+    public void render(){
+        System.out.println("Creating Standard Bot.......  beep.. boop.. beep......\n");
+        System.out.println("Unit name:" + this.getName() + "\n" + "Code:" + " " + this.getCodeWord() +
+                "\n" + "Intelligence Level:" + " " + this.getIQ() + "\n");
+    }
 }

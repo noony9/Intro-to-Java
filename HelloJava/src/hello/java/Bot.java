@@ -1,6 +1,6 @@
 package hello.java;
 
-public class Bot {
+public abstract class Bot {
     private String _name = "bot";
     private int _IQ = 100;
     private int _oil = 10;
@@ -51,10 +51,6 @@ public class Bot {
         }
     }
 
-    public void announceBotBirth(){
-        System.out.println("Creating Bot.......  beep.. boop.. beep......\n");
-        System.out.println("Unit name:" + this.getName() + "\n" + "Code:" + " " + this.getCodeWord() +
-                "\n" + "Intelligence Level:" + " " + this.getIQ() + "\n");
-    }
+    public abstract void render();
 
 }
